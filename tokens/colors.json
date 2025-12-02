@@ -1,0 +1,196 @@
+{
+  "$schema": "https://schemas.figma.com/design-tokens/v1",
+  "colors": {
+    "primary": {
+      "100": {
+        "value": "#F8D3E1",
+        "type": "color",
+        "description": "Primary color - lightest shade"
+      },
+      "200": {
+        "value": "#EF9FBE",
+        "type": "color",
+        "description": "Primary color - light shade"
+      },
+      "300": {
+        "value": "#E66B9A",
+        "type": "color",
+        "description": "Primary color - medium light shade"
+      },
+      "400": {
+        "value": "#E14F87",
+        "type": "color",
+        "description": "Primary color - medium shade"
+      },
+      "500": {
+        "value": "#A11B4F",
+        "type": "color",
+        "description": "Primary color - darkest shade"
+      }
+    },
+    "secondary": {
+      "100": {
+        "value": "#A0F8C6",
+        "type": "color",
+        "description": "Secondary color - lightest shade"
+      },
+      "200": {
+        "value": "#59F39B",
+        "type": "color",
+        "description": "Secondary color - light shade"
+      },
+      "300": {
+        "value": "#10E06A",
+        "type": "color",
+        "description": "Secondary color - medium light shade"
+      },
+      "400": {
+        "value": "#0EC45D",
+        "type": "color",
+        "description": "Secondary color - medium shade"
+      },
+      "500": {
+        "value": "#0B9446",
+        "type": "color",
+        "description": "Secondary color - darkest shade"
+      }
+    },
+    "success": {
+      "100": {
+        "value": "#08E5A6",
+        "type": "color",
+        "description": "Success color - lightest shade"
+      },
+      "200": {
+        "value": "#06B885",
+        "type": "color",
+        "description": "Success color - light shade"
+      },
+      "300": {
+        "value": "#05966D",
+        "type": "color",
+        "description": "Success color - medium light shade"
+      },
+      "400": {
+        "value": "#047857",
+        "type": "color",
+        "description": "Success color - medium shade"
+      },
+      "500": {
+        "value": "#034D37",
+        "type": "color",
+        "description": "Success color - darkest shade"
+      }
+    },
+    "warning": {
+      "100": {
+        "value": "#FFF1BA",
+        "type": "color",
+        "description": "Warning color - lightest shade"
+      },
+      "200": {
+        "value": "#FCD43D",
+        "type": "color",
+        "description": "Warning color - light shade"
+      },
+      "300": {
+        "value": "#D67A33",
+        "type": "color",
+        "description": "Warning color - medium light shade"
+      },
+      "400": {
+        "value": "#B45308",
+        "type": "color",
+        "description": "Warning color - medium shade"
+      },
+      "500": {
+        "value": "#853D06",
+        "type": "color",
+        "description": "Warning color - darkest shade"
+      }
+    },
+    "error": {
+      "100": {
+        "value": "#FFEDED",
+        "type": "color",
+        "description": "Error/Destructive color - lightest shade"
+      },
+      "200": {
+        "value": "#FFC9C9",
+        "type": "color",
+        "description": "Error/Destructive color - light shade"
+      },
+      "300": {
+        "value": "#FF8282",
+        "type": "color",
+        "description": "Error/Destructive color - medium light shade"
+      },
+      "400": {
+        "value": "#EF4444",
+        "type": "color",
+        "description": "Error/Destructive color - medium shade"
+      },
+      "500": {
+        "value": "#AD3131",
+        "type": "color",
+        "description": "Error/Destructive color - darkest shade"
+      }
+    },
+    "neutral": {
+      "100": {
+        "value": "#F8F8F8",
+        "type": "color",
+        "description": "Neutral color - lightest shade"
+      },
+      "200": {
+        "value": "#E5E4E2",
+        "type": "color",
+        "description": "Neutral color - light shade"
+      },
+      "300": {
+        "value": "#D9D8D6",
+        "type": "color",
+        "description": "Neutral color - medium light shade"
+      },
+      "400": {
+        "value": "#CCCBCA",
+        "type": "color",
+        "description": "Neutral color - medium shade"
+      },
+      "500": {
+        "value": "#BDBCBB",
+        "type": "color",
+        "description": "Neutral color - medium dark shade"
+      },
+      "600": {
+        "value": "#ADACAC",
+        "type": "color",
+        "description": "Neutral color - dark shade"
+      }
+    },
+    "base": {
+      "black": {
+        "value": "#000000",
+        "type": "color",
+        "description": "Pure black"
+      },
+      "white": {
+        "value": "#FFFFFF",
+        "type": "color",
+        "description": "Pure white"
+      },
+      "dark": {
+        "value": "#151616",
+        "type": "color",
+        "description": "Dark base color"
+      },
+      "purple": {
+        "value": "#942EFB",
+        "type": "color",
+        "description": "Purple accent color"
+      }
+    }
+  }
+}
+
+
