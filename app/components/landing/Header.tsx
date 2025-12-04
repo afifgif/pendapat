@@ -3,101 +3,39 @@
 import { Button } from "@/components/Button";
 import { Typography } from "@/components/Typography";
 import { colors } from "@/tokens";
-import { icons } from "@/assets/assets";
-// import Image from "next/image";
 
 export function Header() {
 	return (
 		<header
-			style={{
-				backgroundColor: "white",
-				display: "flex",
-				flexDirection: "column",
-				gap: "10px",
-				padding: "20px 0",
-				width: "100%",
-			}}
+			className='bg-white flex flex-col gap-10px p-20px w-full'
+	
+			
 		>
 			<nav
-				style={{
-					display: "flex",
-					gap: "48px",
-					alignItems: "center",
-					width: "100%",
-				}}
+				className='flex gap-48px items-center w-full'
+			
+				
 			>
 				{/* Left Container */}
 				<div
-					style={{
-						display: "flex",
-						gap: "30px",
-						alignItems: "center",
-					}}
+					className='flex gap-30px items-center'
+				
 				>
 					{/* Brand Logo */}
-					<div
-						style={{
-							height: "33.4px",
-							width: "156.999px",
-							position: "relative",
-						}}
+					<div 
+						className='h-33.4px w-156.999px relative'
 					>
-						{/* <Image
-							src={icons.brandLogo}
-							alt="Pendapat Logo"
-							crossOrigin="anonymous"
-							onError={(e) => {
-								const target = e.target as HTMLImageElement;
-								target.style.display = "none";
-								target.parentElement!.innerHTML =
-									'<div style="width:100%;height:100%;background:#f8f8f8;display:flex;align-items:center;justify-content:center;font-size:12px;color:#ccc">Logo</div>';
-							}}
-							style={{
-								width: "100%",
-								height: "100%",
-								objectFit: "contain",
-								display: "block",
-							}}
-						/> */}
+						woi
+					
 					</div>
 
 					{/* Menu Toggle */}
-					<div
-						style={{
-							backgroundColor: colors.neutral[100],
-							display: "flex",
-							alignItems: "center",
-							justifyContent: "center",
-							padding: "8px 20px",
-							borderRadius: "10px",
-							gap: "8px",
-						}}
+					<div className='bg-neutral-100 flex items-center justify-center p-8px rounded-10px gap-8px'
 					>
-						<div
-							style={{
-								width: "24px",
-								height: "24px",
-								position: "relative",
-								overflow: "hidden",
-							}}
+						<div className='w-24px h-24px relative overflow-hidden'
 						>
-							{/* <img
-								src={icons.menu}
-								alt="Menu"
-								crossOrigin="anonymous"
-								onError={(e) => {
-									const target = e.target as HTMLImageElement;
-									target.style.display = "none";
-									target.parentElement!.innerHTML =
-										'<div style="width:100%;height:100%;background:#f8f8f8;border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:10px;color:#ccc">☰</div>';
-								}}
-								style={{
-									width: "100%",
-									height: "100%",
-									objectFit: "contain",
-									display: "block",
-								}}
-							/> */}
+						woi
+						
 						</div>
 						<Typography
 							variant="paragraph-small-regular"
@@ -114,52 +52,17 @@ export function Header() {
 				</div>
 
 				{/* Search Input */}
-				<div
-					style={{
-						flex: 1,
-						display: "flex",
-						justifyContent: "center",
-						minWidth: 0,
-					}}
+				<div className="flex-1 flex justify-center min-w-0"
+
 				>
-					<div
-						style={{
-							backgroundColor: colors.neutral[100],
-							display: "flex",
-							gap: "18px",
-							alignItems: "center",
-							padding: "9px 16px",
-							borderRadius: "10px",
-							width: "526px",
-							maxWidth: "100%",
-						}}
+					<div className="bg-neutral-100 flex gap-18px items-center p-9px rounded-10px w-526px max-w-full"
+	
 					>
-						<div
-							style={{
-								width: "20px",
-								height: "20px",
-								position: "relative",
-								overflow: "hidden",
-								flexShrink: 0,
-							}}
+						<div 
+							className='w-20px h-20px relative overflow-hidden flex-shrink-0'
 						>
-							{/* <img
-								src={icons.search}
-								alt="Search"
-								crossOrigin="anonymous"
-								onError={(e) => {
-									const target = e.target as HTMLImageElement;
-									target.style.display = "none";
-									target.parentElement!.innerHTML =
-										'<div style="width:100%;height:100%;background:#f8f8f8;border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:10px;color:#ccc">🔍</div>';
-								}}
-								style={{
-									width: "100%",
-									height: "100%",
-									objectFit: "contain",
-									display: "block",
-								}}
-							/> */}
+							woi
+						
 						</div>
 						<Typography
 							variant="paragraph-small-regular"
@@ -177,30 +80,15 @@ export function Header() {
 				</div>
 
 				{/* Right Container */}
-				<div
-					style={{
-						display: "flex",
-						gap: "10px",
-						alignItems: "center",
-						flexShrink: 0,
-					}}
+				<div 
+					className='flex gap-10px items-center flex-shrink-0'
 				>
 					{/* Login Link */}
-					<div
-						style={{
-							padding: "8px 50px",
-							borderRadius: "10px",
-						}}
+					<div className='p-8px rounded-10px'
 					>
-						<Typography
+						<Typography className='font-family-euclid-circular-a font-size-16px font-weight-600 line-height-24px letter-spacing-0px'
 							variant="button"
-							style={{
-								fontFamily: "Euclid Circular A",
-								fontSize: "16px",
-								fontWeight: 600,
-								lineHeight: "24px",
-								letterSpacing: "0px",
-							}}
+							
 						>
 							Log Masuk
 						</Typography>
