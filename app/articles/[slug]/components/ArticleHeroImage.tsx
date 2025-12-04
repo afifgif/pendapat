@@ -1,24 +1,26 @@
-'use client'
+"use client";
 
-import { colors } from '@/tokens'
+import { colors } from "@/tokens";
 
 interface ArticleHeroImageProps {
-  imageUrl: string
-  alt: string
+	imageUrl: string;
+	alt: string;
 }
 
 export function ArticleHeroImage({ imageUrl, alt }: ArticleHeroImageProps) {
-  return (
-    <div style={{
-      width: '100%',
-      maxWidth: '813px',
-      height: '386px',
-      borderRadius: '10px',
-      overflow: 'hidden',
-      position: 'relative',
-      backgroundColor: '#021519'
-    }}>
-      <img 
+	return (
+		<div
+			style={{
+				width: "100%",
+				maxWidth: "813px",
+				height: "386px",
+				borderRadius: "10px",
+				overflow: "hidden",
+				position: "relative",
+				backgroundColor: "#021519",
+			}}
+		>
+			{/* <img 
         src={imageUrl} 
         alt={alt}
         crossOrigin="anonymous"
@@ -36,9 +38,8 @@ export function ArticleHeroImage({ imageUrl, alt }: ArticleHeroImageProps) {
           objectFit: 'cover',
           display: 'block'
         }}
-      />
-    </div>
-  )
+      /> */}
+			hello
+		</div>
+	);
 }
-
-
