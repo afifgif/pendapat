@@ -1,7 +1,7 @@
 'use client'
 
 import { typography } from '@/tokens'
-import { HTMLAttributes, forwardRef } from 'react'
+import { HTMLAttributes, forwardRef, type JSX } from 'react';
 
 type TypographyVariant =
   | 'display-01-semibold'

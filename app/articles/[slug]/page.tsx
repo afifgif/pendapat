@@ -14,12 +14,13 @@ import {
 } from './components'
 
 interface ArticleContentPageProps {
-  params: {
+  params: Promise<{
     slug: string
-  }
+  }>
 }
 
-export default function ArticleContentPage({ params }: ArticleContentPageProps) {
+export default async function ArticleContentPage(props: ArticleContentPageProps) {
+  const params = await props.params;
   // In a real app, fetch article data based on slug
   // For now, using sample data matching the Figma design
   const article = {

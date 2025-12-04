@@ -43,7 +43,7 @@ export function ArticleNavigation() {
           }}
           onMouseEnter={(e) => {
             e.currentTarget.style.borderColor = colors.secondary[500]
-            e.currentTarget.style.backgroundColor = colors.secondary[50]
+            e.currentTarget.style.backgroundColor = colors.secondary[100]
           }}
           onMouseLeave={(e) => {
             e.currentTarget.style.borderColor = colors.neutral[200]
@@ -111,7 +111,7 @@ export function ArticleNavigation() {
           }}
           onMouseEnter={(e) => {
             e.currentTarget.style.borderColor = colors.secondary[500]
-            e.currentTarget.style.backgroundColor = colors.secondary[50]
+            e.currentTarget.style.backgroundColor = colors.secondary[100]
           }}
           onMouseLeave={(e) => {
             e.currentTarget.style.borderColor = colors.neutral[200]

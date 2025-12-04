@@ -46,7 +46,8 @@ export function useImageLoad(src: string | undefined) {
 /**
  * Image component with automatic error handling
  */
-interface ImageWithErrorHandlingProps extends React.ImgHTMLAttributes<HTMLImageElement> {
+interface ImageWithErrorHandlingProps extends Omit<React.ImgHTMLAttributes<HTMLImageElement>, 'src'> {
+  src: string | undefined
   fallback?: React.ReactNode
   showPlaceholder?: boolean
 }

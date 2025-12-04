@@ -1,6 +1,6 @@
 'use client'
 
-import type {  Typography } from '@/components/Typography'
+import { Typography } from '@/components/Typography'
 import { colors } from '@/tokens'
 import { images, icons } from '@/assets/assets'
 
