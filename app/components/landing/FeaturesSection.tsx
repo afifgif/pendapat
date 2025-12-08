@@ -7,31 +7,17 @@ import iconPeka from "@/assets/icon/Icon-peka.svg";
 import iconData from "@/assets/icon/Icon-data.svg";
 import iconHand from "@/assets/icon/Icon-hand.svg";
 
-// Helper to get SVG URL - handles both string URLs and module imports
-function getSvgUrl(icon: any): string {
-	if (typeof icon === "string") {
-		return icon;
-	}
-	// If it's a module with default export (URL string)
-	if (icon?.default) {
-		return icon.default;
-	}
-	// If it's a module with src property
-	if (icon?.src) {
-		return icon.src;
-	}
-	// Fallback: try to use the value directly if it's already a string
-	return String(icon);
-}
-
 interface FeatureCardProps {
-	icon: any;
+	icon: React.ComponentType<React.SVGProps<SVGSVGElement>> | string;
 	title: string;
 	description: string;
 }
 
 function FeatureCard({ icon, title, description }: FeatureCardProps) {
-	const iconUrl = getSvgUrl(icon);
+	// Check if icon is a React component (function) or a string URL
+	const isReactComponent = typeof icon === "function" || (typeof icon === "object" && icon !== null && "$$typeof" in icon);
+	const IconComponent = isReactComponent ? icon as React.ComponentType<React.SVGProps<SVGSVGElement>> : null;
+	const iconUrl = typeof icon === "string" ? icon : null;
 	
 	return (
 		<div
@@ -63,16 +49,26 @@ function FeatureCard({ icon, title, description }: FeatureCardProps) {
 					backgroundColor: colors.success[400],
 				}}
 			>
-				<img
-					src={iconUrl}
-					alt=""
-					style={{
-						width: "47.567px",
-						height: "45px",
-						objectFit: "contain",
-						display: "block",
-					}}
-				/>
+				{iconUrl ? (
+					<img
+						src={iconUrl}
+						alt=""
+						style={{
+							width: "47.567px",
+							height: "45px",
+							objectFit: "contain",
+							display: "block",
+						}}
+					/>
+				) : IconComponent ? (
+					<IconComponent
+						width="47.567"
+						height="45"
+						style={{
+							display: "block",
+						}}
+					/>
+				) : null}
 			</div>
 
 			{/* Title */}
