@@ -13,7 +13,7 @@ export function CallToActionBanner() {
       gap: '10px',
       alignItems: 'center',
       justifyContent: 'center',
-      padding: '100px',
+      padding: '100px 0',
       width: '100%'
     }}>
       <Typography 
@@ -22,7 +22,7 @@ export function CallToActionBanner() {
         style={{ 
           color: 'white',
           textAlign: 'center',
-          letterSpacing: '2px',
+          letterSpacing: '1px',
           maxWidth: '1040px'
         }}
       >

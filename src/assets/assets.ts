@@ -17,6 +17,7 @@ import iconData from './icon/Icon-data.svg'
 import iconHand from './icon/Icon-hand.svg'
 import facebookIcon from './social/facebook.svg'
 import twitterIcon from './social/x.svg'
+import gitIcon from './social/git.svg'
 import socialLink1 from './social/Social link-1.svg'
 
 // PNG images are in public folder - use public paths
@@ -43,6 +44,7 @@ export const icons = {
   facebook: facebookIcon,
   instagram: socialLink1, // Using Social link-1 as Instagram placeholder
   twitter: twitterIcon,
+  github: gitIcon,
   whatsapp: socialLink1, // Using Social link-1 as WhatsApp placeholder
   telegram: socialLink1, // Using Social link-1 as Telegram placeholder
   

@@ -34,10 +34,9 @@ function ArticleCard({
 				display: "flex",
 				flexDirection: "column",
 				gap: "20px",
-				padding: "20px",
+				padding: "20px 20px",
 				borderRadius: "10px",
 				minHeight: "100%",
-				textDecoration: "none",
 				color: "inherit",
 				cursor: "pointer",
 				transition: "all 0.2s ease",
@@ -63,28 +62,27 @@ function ArticleCard({
 				}}
 			>
 				{imageUrl ? (
-					// <img
-					//   src={imageUrl}
-					//   alt={title}
-					//   crossOrigin="anonymous"
-					//   onError={(e) => {
-					//     const target = e.target as HTMLImageElement
-					//     target.style.display = 'none'
-					//     if (target.parentElement) {
-					//       target.parentElement.style.background = colors.neutral[200]
-					//     }
-					//   }}
-					//   style={{
-					//     width: '100%',
-					//     height: '100%',
-					//     objectFit: 'cover',
-					//     display: 'block',
-					//     position: 'absolute',
-					//     top: 0,
-					//     left: 0
-					//   }}
-					// />
-					<div>hello</div>
+					<img
+					src={imageUrl}
+					alt={title}
+					crossOrigin="anonymous"
+					onError={(e) => {
+					const target = e.target as HTMLImageElement
+					target.style.display = 'none'
+					if (target.parentElement) {
+					  target.parentElement.style.background = colors.neutral[200]
+					}
+					}}
+					style={{
+					 width: '100%',
+					 height: '100%',
+					 objectFit: 'cover',
+					 display: 'block',
+					 position: 'absolute',
+					 top: 0,
+					 left: 0
+				   }}
+					/>
 				) : (
 					<div
 						style={{
@@ -127,7 +125,8 @@ function ArticleCard({
 						variant="paragraph-small-bold"
 						style={{
 							color: colors.neutral[600],
-							letterSpacing: "2px",
+							letterSpacing: "1px",
+							lineHeight: "120%",
 						}}
 					>
 						{category}
@@ -201,6 +200,7 @@ export function ArticlesSection() {
 				flexDirection: "column",
 				gap: "28px",
 				width: "100%",
+				padding: "0 100px",
 			}}
 		>
 			{/* Section Header */}
@@ -216,7 +216,7 @@ export function ArticlesSection() {
 					variant="heading-h2-bold"
 					style={{
 						color: colors.secondary[500],
-						letterSpacing: "2px",
+						letterSpacing: "1px",
 					}}
 				>
 					Artikel
@@ -227,7 +227,7 @@ export function ArticlesSection() {
 						display: "flex",
 						alignItems: "center",
 						justifyContent: "center",
-						height: "11px",
+						height: "12px",
 					}}
 				>
 					{/* <img
@@ -302,12 +302,12 @@ export function ArticlesSection() {
 						variant="footer-regular"
 						style={{
 							color: colors.secondary[300],
-							letterSpacing: "2px",
+							letterSpacing: "1px",
 						}}
 					>
 						Lihat lebih artikel
 					</Typography>
-					{/* <img
+					{ <img
 						src={icons.arrowRight}
 						alt="Arrow right"
 						crossOrigin="anonymous"
@@ -324,7 +324,7 @@ export function ArticlesSection() {
 							height: "24px",
 							objectFit: "contain",
 						}}
-					/> */}
+					/> }
 				</a>
 			</div>
 		</section>

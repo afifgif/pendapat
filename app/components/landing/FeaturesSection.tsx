@@ -2,15 +2,37 @@
 
 import { Typography } from "@/components/Typography";
 import { colors } from "@/tokens";
-import { images } from "@/assets/assets";
+import iconCommunity from "@/assets/icon/Icon-community.svg";
+import iconPeka from "@/assets/icon/Icon-peka.svg";
+import iconData from "@/assets/icon/Icon-data.svg";
+import iconHand from "@/assets/icon/Icon-hand.svg";
+
+// Helper to get SVG URL - handles both string URLs and module imports
+function getSvgUrl(icon: any): string {
+	if (typeof icon === "string") {
+		return icon;
+	}
+	// If it's a module with default export (URL string)
+	if (icon?.default) {
+		return icon.default;
+	}
+	// If it's a module with src property
+	if (icon?.src) {
+		return icon.src;
+	}
+	// Fallback: try to use the value directly if it's already a string
+	return String(icon);
+}
 
 interface FeatureCardProps {
-	iconUrl: string;
+	icon: any;
 	title: string;
 	description: string;
 }
 
-function FeatureCard({ iconUrl, title, description }: FeatureCardProps) {
+function FeatureCard({ icon, title, description }: FeatureCardProps) {
+	const iconUrl = getSvgUrl(icon);
+	
 	return (
 		<div
 			style={{
@@ -36,26 +58,21 @@ function FeatureCard({ iconUrl, title, description }: FeatureCardProps) {
 					alignItems: "center",
 					justifyContent: "center",
 					overflow: "hidden",
+					marginBottom: "12px",
+					marginTop: "12px",
+					backgroundColor: colors.success[400],
 				}}
 			>
-				{/* <img 
-          src={iconUrl} 
-          alt=""
-          crossOrigin="anonymous"
-          onError={(e) => {
-            const target = e.target as HTMLImageElement
-            target.style.display = 'none'
-            if (target.parentElement) {
-              target.parentElement.style.background = '#0b9446'
-            }
-          }}
-          style={{
-            width: '47.567px',
-            height: '45px',
-            objectFit: 'contain',
-            display: 'block'
-          }}
-        /> */}
+				<img
+					src={iconUrl}
+					alt=""
+					style={{
+						width: "47.567px",
+						height: "45px",
+						objectFit: "contain",
+						display: "block",
+					}}
+				/>
 			</div>
 
 			{/* Title */}
@@ -63,7 +80,8 @@ function FeatureCard({ iconUrl, title, description }: FeatureCardProps) {
 				variant="subheadline-bold"
 				style={{
 					textAlign: "center",
-					letterSpacing: "2px",
+					letterSpacing: "1px", 
+					lineHeight: "100%"
 				}}
 			>
 				{title}
@@ -75,6 +93,7 @@ function FeatureCard({ iconUrl, title, description }: FeatureCardProps) {
 				style={{
 					textAlign: "center",
 					color: colors.base.black,
+					lineHeight: "120%",
 				}}
 			>
 				{description}
@@ -86,22 +105,22 @@ function FeatureCard({ iconUrl, title, description }: FeatureCardProps) {
 export function FeaturesSection() {
 	const features = [
 		{
-			iconUrl: images.featureIcon1,
+			icon: iconCommunity,
 			title: "Interaksi bersama komuniti",
 			description: "Suarakan pandangan dengan kritis dan jelas",
 		},
 		{
-			iconUrl: images.featureIcon2,
+			icon: iconPeka,
 			title: "Sentiasa peka pada isu-isu semasa",
 			description: "Melahirkan generasi yang sentiasa mengambil tahu.",
 		},
 		{
-			iconUrl: images.featureIcon3,
+			icon: iconData,
 			title: "Ketahui fakta melalui data dunia sebenar",
 			description: "Memanfaatkan data untuk kebaikan bersama.",
 		},
 		{
-			iconUrl: images.featureIcon4,
+			icon: iconHand,
 			title: "Perjuangkan hak digital anda",
 			description: "Hak digital anda adalah kebebasan bersuara anda.",
 		},
@@ -125,7 +144,8 @@ export function FeaturesSection() {
 				as="h2"
 				style={{
 					textAlign: "center",
-					letterSpacing: "2px",
+					letterSpacing: "1px",
+					lineHeight: "100%",
 					maxWidth: "828px",
 				}}
 			>
@@ -137,12 +157,13 @@ export function FeaturesSection() {
 					display: "flex",
 					gap: "20px",
 					width: "100%",
+					alignItems: "stretch",
 				}}
 			>
 				{features.map((feature, index) => (
 					<FeatureCard
 						key={index}
-						iconUrl={feature.iconUrl}
+						icon={feature.icon}
 						title={feature.title}
 						description={feature.description}
 					/>

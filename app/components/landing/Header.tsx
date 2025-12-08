@@ -3,39 +3,85 @@
 import { Button } from "@/components/Button";
 import { Typography } from "@/components/Typography";
 import { colors } from "@/tokens";
+import { icons } from "@/assets/assets";
 
 export function Header() {
 	return (
 		<header
-			className='bg-white flex flex-col gap-10px p-20px w-full'
-	
-			
+			style={{
+				backgroundColor: 'white',
+				display: 'flex',
+				flexDirection: 'column',
+				padding: '20px 100px',
+				width: '100%'
+			}}
 		>
 			<nav
-				className='flex gap-48px items-center w-full'
-			
-				
+				style={{
+					display: 'flex',
+					gap: '48px',
+					alignItems: 'center',
+					width: '100%'
+				}}
 			>
 				{/* Left Container */}
 				<div
-					className='flex gap-30px items-center'
-				
+					style={{
+						display: 'flex',
+						gap: '30px',
+						alignItems: 'center'
+					}}
 				>
 					{/* Brand Logo */}
 					<div 
-						className='h-33.4px w-156.999px relative'
+						style={{
+							height: '33.4px',
+							width: '156.999px',
+							position: 'relative'
+						}}
 					>
-						woi
-					
+						<img 
+							src={icons.brandLogo} 
+							style={{
+								width: '100%',
+								height: '100%',
+								objectFit: 'contain',
+								display: 'block'
+							}}
+						/>
 					</div>
 
 					{/* Menu Toggle */}
-					<div className='bg-neutral-100 flex items-center justify-center p-8px rounded-10px gap-8px'
+					<div 
+						style={{
+							backgroundColor: colors.neutral[100],
+							display: 'flex',
+							alignItems: 'center',
+							justifyContent: 'center',
+							padding: '8px 20px',
+							borderRadius: '10px',
+							gap: '8px'
+						}}
 					>
-						<div className='w-24px h-24px relative overflow-hidden'
+						<div 
+							style={{
+								width: '24px',
+								height: '24px',
+								position: 'relative',
+								overflow: 'hidden',
+								flexShrink: 0
+							}}
 						>
-						woi
-						
+							<img 
+								src={icons.menu} 
+								alt="Menu"
+								style={{
+									width: '100%',
+									height: '100%',
+									objectFit: 'contain',
+									display: 'block'
+								}}
+							/>
 						</div>
 						<Typography
 							variant="paragraph-small-regular"
@@ -52,17 +98,45 @@ export function Header() {
 				</div>
 
 				{/* Search Input */}
-				<div className="flex-1 flex justify-center min-w-0"
-
+				<div 
+					style={{
+						flex: 1,
+						display: 'flex',
+						justifyContent: 'center',
+						minWidth: 0
+					}}
 				>
-					<div className="bg-neutral-100 flex gap-18px items-center p-9px rounded-10px w-526px max-w-full"
-	
+					<div 
+						style={{
+							backgroundColor: colors.neutral[100],
+							display: 'flex',
+							gap: '18px',
+							alignItems: 'center',
+							padding: '9px 16px',
+							borderRadius: '10px',
+							width: '526px',
+							maxWidth: '100%'
+						}}
 					>
 						<div 
-							className='w-20px h-20px relative overflow-hidden flex-shrink-0'
+							style={{
+								width: '20px',
+								height: '20px',
+								position: 'relative',
+								overflow: 'hidden',
+								flexShrink: 0
+							}}
 						>
-							woi
-						
+							<img 
+								src={icons.search} 
+								alt="Search"
+								style={{
+									width: '100%',
+									height: '100%',
+									objectFit: 'contain',
+									display: 'block'
+								}}
+							/>
 						</div>
 						<Typography
 							variant="paragraph-small-regular"
@@ -81,14 +155,29 @@ export function Header() {
 
 				{/* Right Container */}
 				<div 
-					className='flex gap-10px items-center flex-shrink-0'
+					style={{
+						display: 'flex',
+						gap: '10px',
+						alignItems: 'center',
+						flexShrink: 0
+					}}
 				>
 					{/* Login Link */}
-					<div className='p-8px rounded-10px'
+					<div 
+						style={{
+							padding: '8px 50px',
+							borderRadius: '10px'
+						}}
 					>
-						<Typography className='font-family-euclid-circular-a font-size-16px font-weight-600 line-height-24px letter-spacing-0px'
+						<Typography
 							variant="button"
-							
+							style={{
+								fontFamily: "Euclid Circular A",
+								fontSize: "16px",
+								fontWeight: 600,
+								lineHeight: "24px",
+								letterSpacing: "0px"
+							}}
 						>
 							Log Masuk
 						</Typography>

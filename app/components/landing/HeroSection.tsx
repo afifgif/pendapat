@@ -11,7 +11,8 @@ export function HeroSection() {
       alignItems: 'center',
       justifyContent: 'space-between',
       width: '100%',
-      gap: '40px'
+      gap: '40px',
+      padding: '0 100px'
     }}>
       {/* Hero Text Block */}
       <div style={{

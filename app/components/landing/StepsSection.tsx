@@ -9,60 +9,77 @@ interface StepProps {
   title: string
   description: string
   phoneMockup?: React.ReactNode
+  phoneOnLeft?: boolean
 }
 
-function Step({ stepNumber, title, description, phoneMockup }: StepProps) {
-  return (
+function Step({ stepNumber, title, description, phoneMockup, phoneOnLeft = true }: StepProps) {
+  const textContent = (
     <div style={{
       display: 'flex',
-      gap: '20px',
-      alignItems: 'center',
-      justifyContent: 'center',
-      width: '100%'
+      flexDirection: 'column',
+      gap: '16px',
+      width: '598px'
     }}>
-      {phoneMockup && (
-        <div style={{
-          width: '422px',
-          height: '748px',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center'
-        }}>
-          {phoneMockup}
-        </div>
-      )}
-      
       <div style={{
         display: 'flex',
         flexDirection: 'column',
         gap: '16px',
-        width: '598px'
+        
       }}>
-        <div style={{
-          display: 'flex',
-          flexDirection: 'column',
-          gap: '16px'
-        }}>
-          <Typography 
-            variant="heading-h4-bold" 
-            style={{ 
-              color: colors.secondary[500],
-              textTransform: 'capitalize',
-              letterSpacing: '2px'
-            }}
-          >
-            {stepNumber}
-          </Typography>
-          
-          <Typography variant="headline-04-bold" style={{ fontSize: '32px' }}>
-            {title}
-          </Typography>
-          
-          <Typography variant="subheadline-regular">
-            {description}
-          </Typography>
-        </div>
+        <Typography 
+          variant="heading-h4-bold" 
+          style={{ 
+            color: colors.secondary[500],
+            textTransform: 'capitalize',
+            letterSpacing: '1px',
+            lineHeight: '120%'
+          }}
+        >
+          {stepNumber}
+        </Typography>
+        
+        <Typography variant="headline-04-bold" style={{ fontSize: '32px' }}>
+          {title}
+        </Typography>
+        
+        <Typography variant="subheadline-regular">
+          {description}
+        </Typography>
       </div>
+    </div>
+  )
+
+  const phoneContent = phoneMockup && (
+    <div style={{
+      width: '422px',
+      height: '748px',
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center'
+    }}>
+      {phoneMockup}
+    </div>
+  )
+
+  return (
+    <div style={{
+      display: 'flex',
+      gap: '40px',
+      alignItems: 'center',
+      justifyContent: 'center',
+      width: '100%'
+    }}>
+      {phoneOnLeft ? (
+        <>
+          {phoneContent}
+          {textContent}
+        </>
+      ) : (
+        <>
+          {textContent}
+          {phoneContent}
+        </>
+      )}
     </div>
   )
 }
@@ -133,13 +150,13 @@ export function StepsSection() {
     <section style={{
       display: 'flex',
       flexDirection: 'column',
-      gap: '56px',
       alignItems: 'center',
+      padding: '40px 100px',
       width: '100%'
     }}>
       <Typography variant="heading-h2-bold" as="h2" style={{ 
         textAlign: 'center',
-        letterSpacing: '0.96px',
+        letterSpacing: '1px',
         width: '100%'
       }}>
         Daftar, jawab dan menang dengan mudah!
@@ -148,7 +165,6 @@ export function StepsSection() {
       <div style={{
         display: 'flex',
         flexDirection: 'column',
-        gap: '20px',
         width: '100%'
       }}>
         {steps.map((step, index) => (
@@ -158,6 +174,7 @@ export function StepsSection() {
             title={step.title}
             description={step.description}
             phoneMockup={step.phoneImage ? <PhoneMockup imageUrl={step.phoneImage} alt={step.phoneAlt} /> : undefined}
+            phoneOnLeft={index % 2 === 0}
           />
         ))}
       </div>

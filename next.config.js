@@ -14,16 +14,9 @@ const nextConfig = {
     unoptimized: true,
   },
   // Turbopack configuration for Next.js 16
-  turbopack: {
-    rules: {
-      // Handle SVG files as static assets (return URL string)
-      '*.svg': {
-        loaders: ['@svgr/webpack'],
-        as: '*.js',
-      },
-    },
-  },
-  // Configure webpack for SVG and image imports (legacy fallback)
+  // Empty config to silence the warning - webpack config below handles SVG as asset/resource
+  turbopack: {},
+  // Configure webpack for SVG and image imports (legacy fallback when not using Turbopack)
   webpack(config) {
     // Handle SVG files as static assets (return URL string)
     config.module.rules.push({
