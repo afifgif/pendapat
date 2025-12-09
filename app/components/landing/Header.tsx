@@ -13,7 +13,7 @@ export function Header() {
 				backgroundColor: 'white',
 				display: 'flex',
 				flexDirection: 'column',
-				padding: '20px 100px',
+				padding: '20px 0',
 				width: '100%'
 			}}
 		>

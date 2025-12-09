@@ -28,7 +28,7 @@ export function Footer() {
 			alignItems: 'center',
 			justifyContent: 'space-between',
 			width: '100%',
-			padding: '40px 100px',
+			padding: '24px 0',
 			minHeight: '80px'
 		}}>
 			<Typography

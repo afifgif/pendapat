@@ -20,7 +20,7 @@ export function ArticleHeroImage({ imageUrl, alt }: ArticleHeroImageProps) {
 				backgroundColor: "#021519",
 			}}
 		>
-			{/* <img 
+			{<img 
         src={imageUrl} 
         alt={alt}
         crossOrigin="anonymous"
@@ -38,7 +38,7 @@ export function ArticleHeroImage({ imageUrl, alt }: ArticleHeroImageProps) {
           objectFit: 'cover',
           display: 'block'
         }}
-      /> */}
+      /> }
 			hello
 		</div>
 	);

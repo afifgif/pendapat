@@ -22,7 +22,7 @@ export function ArticlePagination() {
       alignItems: 'center',
       justifyContent: 'center',
       width: '100%',
-      padding: '40px 0'
+      padding: '40px 100px'
     }}>
       {/* Previous Button */}
       <button

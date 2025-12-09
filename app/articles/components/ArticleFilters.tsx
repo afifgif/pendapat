@@ -23,7 +23,9 @@ export function ArticleFilters() {
       alignItems: 'center',
       width: '100%',
       flexWrap: 'wrap',
-      padding: '20px 0'
+      padding: '20px 100px',
+      margin: 0,
+      boxSizing: 'border-box'
     }}>
       {categories.map((category) => (
         <button

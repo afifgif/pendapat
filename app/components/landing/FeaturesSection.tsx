@@ -115,13 +115,15 @@ export function FeaturesSection() {
         <section
             style={{
                 backgroundColor: colors.neutral[100],
-                display: "flex",
-                flexDirection: "column",
-                gap: "32px",
-                alignItems: "center",
-                justifyContent: "center",
-                padding: "50px 100px",
-                width: "100%",
+                display: 'flex',
+                flexDirection: 'column',
+                gap: '40px',
+                alignItems: 'center',
+                justifyContent: 'center',
+                padding: '100px 100px',
+                width: 'calc(100% + 200px)',
+                marginLeft: '-100px',
+                marginRight: '-100px',
             }}
         >
             <Typography
@@ -141,7 +143,7 @@ export function FeaturesSection() {
                     display: "flex",
                     gap: "20px",
                     width: "100%",
-                    alignItem: "stretch",
+                    alignItems: "stretch",
                 }}
             >
                 {features.map((feature, index) => (

@@ -203,7 +203,8 @@ export function ArticleList() {
       display: 'grid',
       gridTemplateColumns: 'repeat(auto-fill, minmax(350px, 1fr))',
       gap: '24px',
-      width: '100%'
+      width: '100%',
+      padding: '0 100px'
     }}>
       {articles.map((article) => (
         <ArticleCard

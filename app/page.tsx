@@ -11,7 +11,16 @@ import {
 
 export default function LandingPage() {
   return (
-    <div className='bg-white flex flex-col items-center justify-center p-0 56px gap-56px min-h-screen w-full'>
+    <div style={{
+      backgroundColor: 'white',
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      padding: '0 100px 56px',
+      gap: '56px',
+      minHeight: '100vh',
+      width: '100%'
+    }}>
       <Header />
       <HeroSection />
       <AboutSection />

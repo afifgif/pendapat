@@ -13,8 +13,10 @@ export function CallToActionBanner() {
       gap: '10px',
       alignItems: 'center',
       justifyContent: 'center',
-      padding: '100px 0',
-      width: '100%'
+      padding: '100px 100px',
+      width: 'calc(100% + 200px)',
+      marginLeft: '-100px',
+      marginRight: '-100px'
     }}>
       <Typography 
         variant="heading-h2-bold" 

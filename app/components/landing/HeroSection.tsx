@@ -13,7 +13,7 @@ export function HeroSection() {
       justifyContent: 'space-between',
       width: '100%',
       gap: '40px',
-      padding: '0 100px'
+      padding: '0'
     }}>
       {/* Hero Text Block */}
       <div style={{

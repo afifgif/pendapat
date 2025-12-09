@@ -16,8 +16,8 @@ export default function ArticlesPage() {
       display: 'flex',
       flexDirection: 'column',
       alignItems: 'center',
-      padding: '0 100px 56px',
-      gap: '56px',
+      padding: '0',
+      gap: '0',
       minHeight: '100vh',
       width: '100%'
     }}>
