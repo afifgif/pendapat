@@ -26,7 +26,7 @@ export default async function ArticleContentPage(props: ArticleContentPageProps)
   const article = {
     slug: params.slug,
     title: 'Kewujudan \'Percaturan dan permainan\' dalam harga ayam punca bekalan ayam putus?',
-    category: 'Isu-Semasa',
+    category: 'Isu Semasa',
     date: '01 Dec 2021, 03:49 PM',
     author: 'Bernama',
     imageUrl: '/images/article-image1.png',
@@ -50,9 +50,10 @@ export default async function ArticleContentPage(props: ArticleContentPageProps)
   ]
 
   const pollOptions2 = [
-    { text: 'Tidak, sama sahaja', percentage: 65 },
-    { text: 'Mungkin, kita harus cuba dulu', percentage: 20 },
-    { text: 'Ya, hentikan dulu eksport', percentage: 15 },
+    { text: 'Bekalan kurang, harga mahal', percentage: 80 },
+    { text: 'Bekalan kurang, harga munasabah', percentage: 50 },
+    { text: 'Bekalan mencukupi, harga mahal', percentage: 70 },
+    { text: 'Bekalan mencukupi dengan harga munasabah', percentage: 20 },
   ]
 
   return (
@@ -154,11 +155,10 @@ export default async function ArticleContentPage(props: ArticleContentPageProps)
 
             {/* Second Inline Poll */}
             <InlinePollWidget
-              question="Adakah langkah ini dapat membantu menstabilkan bekalan ayam dalam jangka masa terdekat ini?"
+              question="Bagaimana keadaan bekalan ayam di sekitar anda?"
               relatedQuestion="Related Question"
-              options={pollOptions2}
+              options={pollOptions}
               voteCount={4234}
-              initialVariant="default"
             />
 
             {/* Final Article Body */}
