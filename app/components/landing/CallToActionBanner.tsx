@@ -23,7 +23,8 @@ export function CallToActionBanner() {
           color: 'white',
           textAlign: 'center',
           letterSpacing: '1px',
-          maxWidth: '1040px'
+          maxWidth: '1040px',
+          marginTop: '20px',
         }}
       >
         Data peribadi anda mungkin telah dijual.
@@ -34,8 +35,9 @@ export function CallToActionBanner() {
         style={{ 
           color: 'white',
           textAlign: 'center',
-          letterSpacing: '2px',
-          maxWidth: '1040px'
+          letterSpacing: '1px',
+          maxWidth: '1040px',
+          marginBottom: '20px',
         }}
       >
         22.5 juta rakyat Malaysia terlibat di dalam kebocoran data melibatkan nama penuh, nombor ic, alamat rumah, nombor telefon dan foto ID. Semua data ini dicuri daripada server kerajaan dan dijual di pasaran dark web pada harga US$10,000.
@@ -54,10 +56,12 @@ export function CallToActionBanner() {
         <Typography 
           variant="button"
           style={{ 
-            color: colors.secondary[500]
+            color: 'black',
+            letterSpacing: '1px',
+            fontWeight: '400',
           }}
         >
-          Mula soal selidik
+          Mula Soal Selidik
         </Typography>
       </div>
     </section>

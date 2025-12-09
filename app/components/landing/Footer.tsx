@@ -8,17 +8,14 @@ import { icons } from "@/assets/assets";
 export function Footer() {
 	const socialIcons = [
 		{
-			name: "Facebook",
 			icon: icons.facebook,
 			href: "https://www.facebook.com",
 		},
 		{
-			name: "Instagram",
 			icon: icons.instagram,
 			href: "https://www.instagram.com",
 		},
 		{ 
-			name: "GitHub", 
 			icon: icons.github,
 			href: "https://www.github.com" 
 		},
@@ -30,7 +27,8 @@ export function Footer() {
 			alignItems: 'center',
 			justifyContent: 'space-between',
 			width: '100%',
-			padding: '0 100px'
+			padding: '40px 100px',
+			minHeight: '80px'
 		}}>
 			<Typography
 				variant="paragraph-small-regular"
@@ -64,8 +62,7 @@ export function Footer() {
 							height: '24px',
 							position: 'relative'
 						}}
-						title={social.name}
-						aria-label={social.name}
+						aria-label="Social media link"
 					>
 						<div style={{
 							width: '100%',
@@ -75,7 +72,7 @@ export function Footer() {
 						}}>
 							<img 
 								src={social.icon} 
-								alt={social.name}
+								alt=""
 								style={{
 									width: '100%',
 									height: '100%',

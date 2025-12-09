@@ -111,6 +111,7 @@ function ArticleCard({
 					flexDirection: "column",
 					gap: "12px",
 					flex: 1,
+					
 				}}
 			>
 				{/* Category and Date */}
@@ -133,7 +134,9 @@ function ArticleCard({
 					</Typography>
 					<Typography
 						variant="caption-regular"
-						style={{ color: colors.neutral[500] }}
+						style={{ 
+							color: colors.neutral[500]
+						}}
 					>
 						{date}
 					</Typography>
@@ -145,7 +148,10 @@ function ArticleCard({
 				{/* Description */}
 				<Typography
 					variant="caption-regular"
-					style={{ color: colors.neutral[500] }}
+					style={{ 
+						color: colors.neutral[500],
+						lineHeight: '1.2'
+					}}
 				>
 					{description}
 				</Typography>
@@ -290,6 +296,7 @@ export function ArticlesSection() {
 						cursor: "pointer",
 						textDecoration: "none",
 						transition: "opacity 0.2s ease",
+						marginBottom: '20px',
 					}}
 					onMouseEnter={(e) => {
 						e.currentTarget.style.opacity = "0.8";
@@ -307,7 +314,7 @@ export function ArticlesSection() {
 					>
 						Lihat lebih artikel
 					</Typography>
-					{ <img
+					<img
 						src={icons.arrowRight}
 						alt="Arrow right"
 						crossOrigin="anonymous"
@@ -324,7 +331,7 @@ export function ArticlesSection() {
 							height: "24px",
 							objectFit: "contain",
 						}}
-					/> }
+					/>
 				</a>
 			</div>
 		</section>
