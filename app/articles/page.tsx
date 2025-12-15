@@ -22,7 +22,7 @@ export default function ArticlesPage() {
       width: '100%'
     }}>
       <Header />
-      <ArticleHeader />
+      {/* <ArticleHeader /> */}
       <ArticleFilters />
       <ArticleList />
       <ArticlePagination />
